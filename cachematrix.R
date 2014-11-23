@@ -19,14 +19,14 @@
 
 makeCasheMatrix <- function(x = numeric()) {
   invMat <- NULL
-  set <- function(y) {
+  set <- function(y) {  ## set function
     x <<- y
     invMat <<- NULL
   }
-  get <- function() x
-  setInverse <- function(inverse) invMat <<- inverse
-  getInverse <- function() invMat
-  list(set = set, get = get,
+  get <- function() x ## get function
+  setInverse <- function(inverse) invMat <<- inverse  ## setInverse function
+  getInverse <- function() invMat  ## getInverse function
+  list(set = set, get = get,  ## Returns function list
        setInverse = setInverse,
        getInverse = getInverse)
 }
